@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { test } from '../src/customTest';
+import { test } from '@Test';
 import { getRandomElement } from '@Utils/randomElementFromArray';
 
 test.describe('Search Bar', () => {
@@ -7,7 +7,6 @@ test.describe('Search Bar', () => {
     const searchTextVariants = ['Parallelism', 'Locators', 'Sharding'];
     await test.step('search button opens search modal', async () => {
       await homePage.open();
-
       await homePage.Header.clickSearchButton();
 
       expect(homePage.Locators.searchModal).toBeVisible;
@@ -17,6 +16,7 @@ test.describe('Search Bar', () => {
       await homePage.SearchModal.fillSearchText(
         getRandomElement(searchTextVariants)
       );
+
       expect(homePage.SearchModal.Locators.searchResult('Parallelism'))
         .toBeVisible;
     });

@@ -1,6 +1,6 @@
 import { Header } from '@Components/shared/header';
-import { HeroBanner } from '../components/homepage/heroBanner';
-import { Container } from '../core/container';
+import { HeroBanner } from '@Components/homepage/heroBanner';
+import { Container } from '@Core/container';
 import { SearchModal } from '@Components/shared/searchModal';
 
 export class HomePage extends Container {
