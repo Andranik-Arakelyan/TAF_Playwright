@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { test } from '../src/customTest';
+import { test } from '@Test';
 
 test.describe('Check title of homepage and heading in docs page', () => {
   test('has title', async ({ page, homePage }) => {
@@ -10,6 +10,6 @@ test.describe('Check title of homepage and heading in docs page', () => {
   test('get started link', async ({ homePage, docsPage }) => {
     await homePage.open();
     await homePage.HeroBanner.clickLink('Get started');
-    await expect(docsPage.getHeadingByName('Installation')).toBeVisible();
+    await expect(docsPage.getHeadingByName('Alo')).toBeVisible();
   });
 });

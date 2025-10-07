@@ -1,4 +1,4 @@
-import { Container } from '../core/container';
+import { Container } from '@Core/container';
 export class DocsPage extends Container {
   private Locators = {
     headingByName: (name: string) =>
