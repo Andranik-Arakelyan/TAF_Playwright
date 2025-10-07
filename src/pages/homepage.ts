@@ -1,14 +1,20 @@
-import { HeroBanner } from '../components/homepage/heroBanner'
-import { Container } from '../core/container'
+import { Header } from '@Components/shared/header';
+import { HeroBanner } from '../components/homepage/heroBanner';
+import { Container } from '../core/container';
+import { SearchModal } from '@Components/shared/searchModal';
 
 export class HomePage extends Container {
-  private Locators = {
+  public Locators = {
     heroBanner: this.page.locator('header.hero'),
-  }
+    header: this.page.locator('nav[aria-label="Main"]'),
+    searchModal: this.page.locator('.DocSearch-Modal'),
+  };
 
   public async open() {
-    await this.page.goto('https://playwright.dev/', { waitUntil: 'load' })
+    await super.open('https://playwright.dev/');
   }
 
-  public HeroBanner = new HeroBanner(this.Locators.heroBanner, this.page)
+  public HeroBanner = new HeroBanner(this.Locators.heroBanner, this.page);
+  public Header = new Header(this.Locators.header, this.page);
+  public SearchModal = new SearchModal(this.Locators.searchModal, this.page);
 }

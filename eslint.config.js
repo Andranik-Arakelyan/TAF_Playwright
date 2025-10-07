@@ -1,7 +1,7 @@
-import eslintPluginPrettier from 'eslint-plugin-prettier'
-import eslintPluginPlaywright from 'eslint-plugin-playwright'
-import tsParser from '@typescript-eslint/parser'
-import tsPlugin from '@typescript-eslint/eslint-plugin'
+import eslintPluginPrettier from 'eslint-plugin-prettier';
+import eslintPluginPlaywright from 'eslint-plugin-playwright';
+import tsParser from '@typescript-eslint/parser';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
 
 export default [
   {
@@ -51,10 +51,10 @@ export default [
         'error',
         {
           singleQuote: true,
-          semi: false,
+          semi: true,
           trailingComma: 'es5',
         },
       ],
     },
   },
-]
+];

@@ -9,14 +9,14 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
+    'prettier',
   ],
   env: {
     node: true,
     es2021: true,
   },
   rules: {
-    'prettier/prettier': ['error', { singleQuote: true, semi: false }],
+    'prettier/prettier': ['error', { singleQuote: true, semi: true }],
     'no-console': 'warn',
     curly: 'error',
     eqeqeq: 'error',
@@ -24,4 +24,4 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
   },
-}
+};
