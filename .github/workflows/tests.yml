@@ -1,6 +1,5 @@
 name: Run Playwright tests
 on: [pull_request]
-
 jobs:
   UI-tests:
     timeout-minutes: 20
