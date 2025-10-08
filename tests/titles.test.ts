@@ -10,6 +10,6 @@ test.describe('Check title of homepage and heading in docs page', () => {
   test('get started link', async ({ homePage, docsPage }) => {
     await homePage.open();
     await homePage.HeroBanner.clickLink('Get started');
-    await expect(docsPage.getHeadingByName('Alo')).toBeVisible();
+    await expect(docsPage.getHeadingByName('Installation')).toBeVisible();
   });
 });
