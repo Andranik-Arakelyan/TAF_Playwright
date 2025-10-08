@@ -13,7 +13,7 @@ export class HomePage extends Container {
   };
 
   public async open() {
-    await super.open('https://playwright.dev/');
+    await super.open('/');
   }
 
   public HeroBanner = new HeroBanner(this.Locators.heroBanner, this.page);
